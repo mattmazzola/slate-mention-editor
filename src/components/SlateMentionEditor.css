@@ -1,0 +1,67 @@
+:root {
+    --color-neutralTertiary: #a6a6a6;
+    --color-neutralDark: #212121;
+    --color-neutralLighter: #f4f4f4;
+    --color-themePrimary: #0078d7;
+    --color-error: #a80000;
+}
+
+.editor {
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.25);
+}
+.editor-container__title {
+    color: rgba(0,0,0,0.5);
+    padding: 1em 0 0 1em;
+    font-size: 11px;
+}
+.editor {
+    position: relative;
+    text-align: left;
+}
+
+.editor-container {
+    position: relative;
+}
+/** This is BEM violation, don't repeat */
+.editor-container .ms-TextField-errorMessage {
+    padding: 0.5em 0;
+}
+
+
+.editor {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(51, 51, 51);
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 0.125em 0.5em;
+    line-height: 2em;
+
+    border: 1px solid var(--color-neutralTertiary);
+    cursor: text;
+    padding: 0.125em 0.5em;
+}
+.editor:hover {
+    border-color: var(--color-neutralDark);
+}
+
+/**
+ * This isn't true BEM since the .editor Block is within the Modifier but
+ * we can't easily change the structure of HTML and still want to preserve
+ * the class name conventions
+ */
+.editor--error .editor,
+.editor--error {
+    border-color: var(--color-error);
+}
+.editor--active:not(.editor--error).editor,
+.editor--active:not(.editor--error) {
+    border-color: var(--color-themePrimary);
+}
+
+.editor--disabled.editor,
+.editor--disabled {
+    border-color: var(--color-neutralLighter);
+    background: var(--color-neutralLighter);
+}
+
