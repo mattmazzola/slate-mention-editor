@@ -69,7 +69,7 @@ class App extends React.Component<{}, State> {
   state = initialState
 
   onChange = (value: any) => {
-    const mentions = C.Utilities.getEntitiesFromValue(value)
+    const mentions = C.Utilities.getOptionsFromValue(value)
     if (mentions.length !== this.state.mentions.length) {
       console.log("onChange mentions: ", mentions)
     }
