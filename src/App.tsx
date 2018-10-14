@@ -191,13 +191,13 @@ class App extends React.Component<{}, State> {
           </ul>
 
           <h2>🤔 Design Philosophy:</h2>
-          <p>This usage of component is modeled after normal React controlled inputs. Example: <code>&lt;input value={'{'}text{'}'} onChange={'{'}this.onChange{'}'} /&gt;</code>.  Internally there is a <a href="https://www.slatejs.org" target="_blank">Slate.js</a> editor so the controlled value is a Slate value instead of a string.  There is a plugin for the mention behavior, but this more than just a plugin because we also have the option picker which is a separate menu whose state is updated when the Slate editor state is updated.</p> This separate menus is placed near the cursor and holds the closest matches for the metion. The arrow keys allow navigation of the matches without changing position of the cursor in original text. Enter is not allowed in the original text so it can be used for autocomplete. 
+          <p>This usage of component is modeled after normal React controlled inputs. Example: <code>&lt;input value={'{'}text{'}'} onChange={'{'}this.onChange{'}'} /&gt;</code>.  Internally there is a <a href="https://www.slatejs.org" target="_blank">Slate.js</a> editor so the controlled value is a Slate value instead of a string.  There is a plugin for the mention behavior, but this more than just a plugin because we also have the option picker which is a separate menu whose state is updated when the Slate editor state is updated.</p> The closest matches are computed using <a href="http://fusejs.io/" target="_blank">fuse.js</a> and it is placed near the cursor as you type. The arrow keys allow navigation of the matches without changing position of the cursor in original text. Enter is not allowed in the original text so it can be used for autocomplete. In order to delete the entire mention we inspect if user is performing a 'remove_text' operation and then check if it's within an inline node that represents the mention and delete the whole node. 
           The user can type text and when they want to mention a special word they can press the special character to begin the search.
 
-          <h3>Diagram</h3>
-          <p>Notice the internal update cycle and the external update cycle</p>
+          {/* <h3>Diagram</h3>
+          <p>Notice the internal update cycle and the external update cycle</p> */}
 
-          <h2>🔧 Internals:</h2>
+          {/* <h2>🔧 Internals:</h2>
           <p>If you're interested in how two inputs: string of text, and list of labeled entities converted into slate value for render</p>
           <pre>{`convertEntitiesAndTextToTokenizedEditorValue(text, labeledEntities)`}</pre>
           <div className="steps">
@@ -207,7 +207,7 @@ class App extends React.Component<{}, State> {
               <pre className="code-block">{JSON.stringify({}, null, '  ')}</pre>
               <pre className="code-block">{JSON.stringify({}, null, '  ')}</pre>
               <pre className="code-block">{JSON.stringify({}, null, '  ')}</pre>
-          </div>
+          </div> */}
         </main>
       </div>
     );
