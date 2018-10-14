@@ -65,6 +65,8 @@ export default function mentionPlugin(inputOptions: Partial<IOptions> = {}) {
             if (isWithinMentionNode) {
                 const lastInlineNode = change.value.inlines.last()
                 const isNodeCompleted = lastInlineNode.data.get('completed')
+
+                
                 if (!isNodeCompleted && event.key === options.closingCharacter) {
                     event.preventDefault()
 
