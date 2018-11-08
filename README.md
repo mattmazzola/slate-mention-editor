@@ -33,10 +33,8 @@ Declare
 
 ## Demo
 
-[https://mattmazzola.github.io/slate-mention-editor/]
-(https://mattmazzola.github.io/slate-mention-editor/)
+[https://mattmazzola.github.io/slate-mention-editor/](https://mattmazzola.github.io/slate-mention-editor/)
 
 ## Source
 
-[https://github.com/mattmazzola/slate-mention-editor]
-(https://github.com/mattmazzola/slate-mention-editor)
+[https://github.com/mattmazzola/slate-mention-editor](https://github.com/mattmazzola/slate-mention-editor)
