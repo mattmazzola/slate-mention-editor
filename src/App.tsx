@@ -197,17 +197,8 @@ class App extends React.Component<{}, State> {
           {/* <h3>Diagram</h3>
           <p>Notice the internal update cycle and the external update cycle</p> */}
 
-          {/* <h2>🔧 Internals:</h2>
-          <p>If you're interested in how two inputs: string of text, and list of labeled entities converted into slate value for render</p>
-          <pre>{`convertEntitiesAndTextToTokenizedEditorValue(text, labeledEntities)`}</pre>
-          <div className="steps">
-              <div>{`1. tokenizeText(text)`}</div>
-              <div>{`2. labeledTokens(tokenzedText, labeledEntities)`}</div>
-              <div>{`3. convertToSlateValue(labeledTokens)`}</div>
-              <pre className="code-block">{JSON.stringify({}, null, '  ')}</pre>
-              <pre className="code-block">{JSON.stringify({}, null, '  ')}</pre>
-              <pre className="code-block">{JSON.stringify({}, null, '  ')}</pre>
-          </div> */}
+          <h2>🔧 Internals:</h2>
+          <p>Each mention is represented as an [https://docs.slatejs.org/slate-core/inline](Inline) node which contains one Text node.. When the specified trigger key ($) is entered an inline node is added/inserted into that position. The typed text is matched against the available options using fuse.js and the matches are shown in the menu/picker. The user can navigate matches by user the up/down arrow keys without influencing the text.  Once the desired match is highlighted the user can press Tab or Enter to select it.  The selection sets the value of the current text node which is inside the inline node and moves the cursor/input to the next text node which will be out of the current inline node. Having each mention be it's own inline node allows for uique stylng and multiple occurrences.</p>
         </main>
       </div>
     );

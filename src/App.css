@@ -24,7 +24,7 @@ header {
 .labels {
   display: grid;
   grid-template: auto / min-content min-content max-content;
-  grid-gap: 0 0.5em
+  grid-gap: 0.25em 0.5em;
 }
 
 main {
@@ -49,7 +49,7 @@ main {
   display: grid;
   grid-template: auto / 1fr 2fr;
   grid-auto-flow: column;
-  grid-gap: 1em;
+  grid-gap: 2em;
 }
 
 .main-demo .state .header {
