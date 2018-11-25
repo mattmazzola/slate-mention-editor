@@ -21,9 +21,14 @@ header {
   background: #9fe1ff;
 }
 
-.labels {
+.options {
   display: grid;
   grid-template: auto / min-content min-content max-content;
+  grid-gap: 0.25em 0.5em;
+}
+.labels {
+  display: grid;
+  grid-template: auto / 1fr;
   grid-gap: 0.25em 0.5em;
 }
 

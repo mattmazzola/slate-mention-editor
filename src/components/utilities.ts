@@ -70,11 +70,11 @@ export const getNodesByPath = (path: number[], root: any, nodes: any[] = []): an
     return getNodesByPath(nextPath, nextRoot, nodes)
 }
 
-export const getEntitiesFromValue = (value: any): models.IOption[] => {
+export const getEntitiesFromValue = <T extends models.IOption = models.IOption>(value: any): T[] => {
     const tree = value.toJSON().document
 
     return depthFirstSearch(tree, n => n.type === models.NodeTypes.Mention && n.data.completed === true, n => n.type === models.NodeTypes.Optional)
-        .map<models.IOption>(n => n.data.option)
+        .map<T>(n => n.data.option)
 }
 
 interface INode {
